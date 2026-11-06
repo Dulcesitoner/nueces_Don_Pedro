@@ -1,0 +1,459 @@
+/* ==========================================================
+   Nueces Don Pedro - Hoja de estilos
+   Aplicaciones Web | Práctica de maquetación con CSS
+   ========================================================== */
+
+/* ---------- Estilos generales ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f5ef;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* ---------- Encabezado ---------- */
+.encabezado {
+    padding: 30px 20px;
+    background-color: #6f4e37;
+    color: #ffffff;
+    text-align: center;
+}
+
+.encabezado h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.encabezado p {
+    margin: 8px 0 0;
+}
+
+/* ---------- Menú de navegación ---------- */
+.menu {
+    background-color: #3f2d20;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 18px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu a:hover,
+.menu a:focus {
+    background-color: #c7a47b;
+}
+
+.menu a.activo {
+    background-color: #6f4e37;
+}
+
+/* ---------- Banner principal ---------- */
+.banner {
+    min-height: 350px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    background-image: url("../imagenes/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-contenido {
+    max-width: 520px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.90);
+    border-radius: 8px;
+}
+
+/* ---------- Botón ---------- */
+.boton {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #6f4e37;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background-color: #3f2d20;
+}
+
+/* ---------- Productos destacados ---------- */
+.productos {
+    padding: 35px 0;
+}
+
+.productos h2 {
+    text-align: center;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.precio {
+    color: #6f4e37;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* ---------- Contenido principal y barra lateral ---------- */
+.distribucion {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.servicios,
+.lateral {
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.lateral {
+    background-color: #e8ddc8;
+}
+
+.lateral h2 {
+    color: #6f4e37;
+}
+
+/* ---------- Formulario ---------- */
+form {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #c7a47b;
+}
+
+legend,
+label {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #6f4e37;
+    outline: 2px solid #e8ddc8;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #6f4e37;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3f2d20;
+}
+
+/* ---------- Pie de página ---------- */
+.pie-pagina {
+    margin-top: 40px;
+    padding: 30px 20px;
+    background-color: #3f2d20;
+    color: #ffffff;
+    text-align: center;
+}
+
+.pie-pagina a {
+    color: #ffffff;
+}
+
+/* ---------- Páginas internas ---------- */
+.pagina h2 {
+    color: #6f4e37;
+}
+
+.pagina .bloque {
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.pagina .bloque > :first-child {
+    margin-top: 0;
+}
+
+.pagina .bloque > :last-child {
+    margin-bottom: 0;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.galeria figure {
+    margin: 0;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.galeria img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.galeria figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+.preguntas details {
+    margin-bottom: 12px;
+    padding: 14px 18px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.preguntas summary {
+    font-weight: bold;
+    color: #6f4e37;
+    cursor: pointer;
+}
+
+.preguntas p {
+    margin-bottom: 0;
+}
+
+.tabla-horario {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-horario th,
+.tabla-horario td {
+    padding: 10px;
+    border-bottom: 1px solid #e8ddc8;
+    text-align: left;
+}
+
+/* ---------- Diseño responsivo ---------- */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .distribucion {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        min-height: 280px;
+        padding: 20px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner-contenido {
+        padding: 18px;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   Estilos adicionales para el Back-end
+   Aplicaciones Web | Práctica de Back-end con PHP y MySQL
+   ========================================================== */
+.formulario {
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+}
+
+.formulario input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.formulario textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.formulario .boton {
+    margin-top: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    padding: 12px;
+    background: #ffe1e1;
+    color: #7a1111;
+    border-radius: 5px;
+}
+
+.mensaje-exito {
+    padding: 35px;
+    text-align: center;
+    background: #eef5e8;
+    border-radius: 8px;
+}
+
+.tabla-responsive {
+    overflow-x: auto;
+}
+
+.tabla-admin {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.tabla-admin th,
+.tabla-admin td {
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+
+.tabla-admin th {
+    background: #6f4e37;
+    color: #ffffff;
+}
+
+.form-inline {
+    display: inline;
+}
+
+.form-inline button {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #8a1f1f;
+    cursor: pointer;
+}
+
+.form-inline button:hover {
+    background: none;
+    text-decoration: underline;
+}
+
+.barra-admin {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inactivo {
+    color: #888888;
+}
